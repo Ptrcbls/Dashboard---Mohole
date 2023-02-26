@@ -62,8 +62,17 @@
 
             <div class="slider-item">
                 <div class="gradient">
-                    <div class="bg_img" style="background-image: url(<?php echo $eventImg; ?>);">
-                    <div class="pils">
+		   <div class="pils">
+                      <?php
+                         if (!empty($categories)) {
+                        	 for ($i = 0; $i < count($categories); $i++) {
+                             		echo '<span class="cat-' . $categories[$i]->slug . '">' . $categories[$i]->name . '</span> ';
+                                }
+                         }
+                      ?>
+                   </div>
+                   <div class="bg_img" style="background-image: url(<?php echo $eventImg; ?>);">
+                   <div class="pils">
                                 <?php
                                 if (!empty($categories)) {
                                 for ($i = 0; $i < count($categories); $i++) {
@@ -92,7 +101,10 @@
                     <div class="contenuto">
                         <div>
                             <h2><?php echo $title; ?></h2>
-                            <?php echo $content; ?>
+				<!--<?//php echo $content; ?> -->
+				 <p class="long-content"> <?php echo $long_content; ?></p>
+                               	 <p class="short-content"><?php echo $short_content; ?> </p>
+				
 
                             <?php
                             /* CHECK IF THERE'S A INFO FIELD */
@@ -120,15 +132,7 @@
                             <?php } ?>
                                 
                         
-<!--                             <div class="pils">
-                                <?php
-                                // if (!empty($categories)) {
-                                // for ($i = 0; $i < count($categories); $i++) {
-                                //     echo '<span class="cat-' . $categories[$i]->slug . '">' . $categories[$i]->name . '</span> ';
-                                // }
-                                // }
-                                ?>
-                            </div> -->
+			   
                         </div>
                         <?php
                         if( !empty($qr) ): ?>
