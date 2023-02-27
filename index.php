@@ -15,7 +15,7 @@
             $category_color = get_field('color', 'category_' . $categories[$i]->term_id);
             ?>
             .pils span.cat-<?php echo $categories[$i]->slug; ?> {
-                background-color: <?php echo $category_color; ?>;
+                border-color: <?php echo $category_color; ?>;
             }
         <?php } ?>
     </style>
@@ -58,31 +58,22 @@
             $eventImg = get_the_post_thumbnail_url(get_the_ID(), 'large');
             $qr = get_field('qr_code');
             $link = get_field('link');
+            // $long_content = get_field('contenuto_lungo');
+            $short_content = get_field('contenuto_corto');
             ?>
 
             <div class="slider-item">
                 <div class="gradient">
-		   <div class="pils">
-                      <?php
-                         if (!empty($categories)) {
-                        	 for ($i = 0; $i < count($categories); $i++) {
-                             		echo '<span class="cat-' . $categories[$i]->slug . '">' . $categories[$i]->name . '</span> ';
-                                }
-                         }
-                      ?>
-                   </div>
-                   <div class="bg_img" style="background-image: url(<?php echo $eventImg; ?>);">
-                   <div class="pils">
-                                <?php
-                                if (!empty($categories)) {
-                                for ($i = 0; $i < count($categories); $i++) {
-                                    echo '<span class="cat-' . $categories[$i]->slug . '">' . $categories[$i]->name . '</span> ';
-                                }
-                                }
-                                ?>
-                            </div>
-                    
-
+                    <div class="pils">
+                        <?php
+                        if (!empty($categories)) {
+                            for ($i = 0; $i < count($categories); $i++) {
+                                echo '<span class="cat-' . $categories[$i]->slug . '">' . $categories[$i]->name . '</span> ';
+                            }
+                        }
+                        ?>
+                    </div>
+                    <div class="bg_img bg_img_1" style="background-image: url(<?php echo $eventImg; ?>);">
                         <?php
                         /* CHECK IF THERE'S A LOCATION FIELD */
                         /* NOT EVERY SLIDE HAS A LOCATION */
@@ -101,10 +92,11 @@
                     <div class="contenuto">
                         <div>
                             <h2><?php echo $title; ?></h2>
-				<!--<?//php echo $content; ?> -->
-				 <p class="long-content"> <?php echo $long_content; ?></p>
-                               	 <p class="short-content"><?php echo $short_content; ?> </p>
-				
+                                <div class="content"> 
+                                    <?php echo $content; ?> 
+                                </div>
+                                <p class="short-content"><?php echo $short_content; ?>  </p>
+                          
 
                             <?php
                             /* CHECK IF THERE'S A INFO FIELD */
@@ -130,9 +122,6 @@
                             
                             </a></p></div>
                             <?php } ?>
-                                
-                        
-			   
                         </div>
                         <?php
                         if( !empty($qr) ): ?>
