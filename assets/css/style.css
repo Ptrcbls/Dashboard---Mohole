@@ -70,6 +70,14 @@ body {
 	font-style: italic;
 	color: white;
 	text-decoration: none;
+	padding: 4px 8px;
+	font-size: 0.5rem;
+	margin-right: 5px;
+	margin-top: 5px;
+	border-radius: 100px;
+	border: 2px solid #ccc;
+	background-color: #636363;
+
 }
 
 .qr {
@@ -91,8 +99,7 @@ body {
 	height: 100%;
 }
 
-.bg_img {
-	position: relative;
+.bg_img_1 {
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -118,6 +125,84 @@ body {
 	background-image: url(/img/film2.jpeg);
 }
 
+.bg_img_2 {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	border-radius: 20px;
+	margin: 20px 20px;
+	padding: 20px;
+	height: 60%;
+	-webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	background-image: url(/img/fuori3.jpeg);
+}
+
+.bg_img_3 {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	border-radius: 20px;
+	margin: 20px 20px;
+	padding: 20px;
+	height: 60%;
+	-webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	background-image: url(/img/book2.jpg);
+}
+
+.bg_img_4 {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	border-radius: 20px;
+	margin: 20px 20px;
+	padding: 20px;
+	height: 60%;
+	-webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	background-image: url(/img/4.jpg);
+}
+
 .where {
 	border-radius: 100px;
 	-webkit-box-sizing: border-box;
@@ -139,9 +224,11 @@ body {
 	display: flex;
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	margin-left: 20px;
+	margin-top: 10px;
 }
 
-.pils span {
+.pils span{
 	padding: 6px 10px;
 	font-size: 0.7rem;
 	margin-right: 5px;
@@ -158,9 +245,12 @@ body {
 	display: none;
 }
 
+
+
 /* MEDIA QUERY */
 /* Mobile and Medium */
 @media (min-width: 800px) {
+
 	.contenuto p {
 		width: 80%;
 	}
@@ -179,7 +269,10 @@ body {
 	.qr {
 		display: none;
 	}
+
+	
 }
+
 /* Desktop and Large */
 @media (min-width: 1300px) {
 	.contenuto p {
@@ -192,7 +285,7 @@ body {
 	}
 	.contenuto h2 {
 		font-size: 2.7rem;
-    		margin-block-start: 40px;
+    margin-block-start: 40px;
 	}
 	.info {
 		font-size: 0.9rem;
@@ -201,14 +294,18 @@ body {
 		display: block;
 		margin: 40px 0px 0px 0px;
 		object-fit: cover;
-    		justify-self: end;
+    justify-self: end;
 	}
-	.long-content{
+	.content{
 		display: none;
 	}
 	.short-content{
 		display: block;
 	}
+
+
+
+
 }
 /* DARK MODE */
 .st0 {
@@ -237,9 +334,6 @@ body {
 }
 
 .where {
-	text-align: right;
-	position: absolute;
-	left: 80%;
 	font-size: 0.7rem;
 	padding: 8px 9px;
 	border: 1px solid #111;
@@ -266,7 +360,6 @@ body {
 
 @media (min-width: 800px) {
 	.where {
-		left: 80%;
 		font-size: 1.1rem;
 		padding: 10px 11px;
 		border: 1px solid #111;
@@ -279,7 +372,6 @@ body {
 }
 @media (min-width: 1300px) {
 	.where {
-		left: 90%;
 		font-size: 1.1rem;
 		padding: 10px 11px;
 		border: 1px solid #111;
@@ -294,8 +386,6 @@ body {
 	}
 	.link {
 		display: none;
-	}.pils span{
-		font-size: 1.5rem;
 	}
 }
 /* LIGHT MODE */
@@ -319,21 +409,24 @@ body {
 	color: black;
 }
 .light .where {
+	font-size: 0.7rem;
+	padding: 8px 9px;
 	border: 1px solid #f0f0f0;
 	color: black;
 	background-color: #f0f0f0;
 }
 .light .date {
-	font-size: 0.6rem;
+	font-size: 0.7rem;
 	padding: 8px 9px;
 	border: 1px solid #f0f0f0;
 	color: white;
 	background-color: black;
 }
 .light .pils span {
-	border: none;
+	/* border: none; */
 	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+	color: black;
 }
 .light .link a {
 	color: black;
@@ -352,6 +445,7 @@ body {
 		padding: 10px 11px;
 		border: 1px solid #f0f0f0;
 	}
+
 }
 @media (min-width: 1300px) {
 	.light .where {
